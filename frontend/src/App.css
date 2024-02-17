@@ -1,0 +1,1682 @@
+.App {
+  width: 100wh;
+  height: 100vh;
+  overflow: scroll;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+  font-family: kanit;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-cc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress {
+  height: 7px;
+  width: 100%;
+  background: linear-gradient(#fcfcfe 0 0), linear-gradient(#fcfcfe 0 0),
+    #020202;
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  animation: progress-7x9cg2 1.7999999999999998s infinite;
+}
+
+input[type='time']::-webkit-calendar-picker-indicator {
+  background-color: white;
+}
+
+@keyframes progress-7x9cg2 {
+  0% {
+    background-position: -150% 0, -150% 0;
+  }
+
+  66% {
+    background-position: 250% 0, -150% 0;
+  }
+
+  100% {
+    background-position: 250% 0, 250% 0;
+  }
+}
+
+::file-selector-button {
+  display: none;
+}
+
+/* ====================  Main ==================== */
+
+ToastContainer {
+  color: black;
+}
+.navbar {
+  width: 100%;
+  padding: 13x 20px;
+  height: 14vh;
+  background: black;
+  position: fixed;
+  z-index: 999;
+}
+
+/* .scrollednav{
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  background:linear-gradient(to top,transparent 0%,rgb(0,0,0,0.3) 50%) ;
+  top: 0;
+  z-index: 99;
+} */
+
+.navbar-brand {
+  width: 50px;
+  color: white;
+}
+
+.nav-items {
+  position: absolute;
+  right: 5rem;
+  top: 1rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-icon {
+  margin-left: 10px;
+  background-color: black;
+  color: white;
+}
+
+.nav-item-profile {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.nav-item {
+  height: 1rem;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item:hover {
+  background-color: white;
+  color: black;
+}
+
+.nav-item:hover .nav-link {
+  background-color: white;
+  color: black;
+}
+
+.nav-item:hover .nav-icon {
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+  .navbar {
+    height: 8vh;
+  }
+  .nav-items{
+    right: 1rem;
+  }
+  .navbar-brand{
+    padding: 1rem 1rem;
+  }
+}
+
+/* ===================== LOGIN ===================== */
+
+.login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.form-container {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.login-outer {
+  height: 85%;
+  width: 30rem;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-inner {
+  height: 90%;
+  width: 80%;
+  background-color: black;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.5rem 0.5rem 0 gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.login-para {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.login-form {
+  width: 80%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-input {
+  width: 100%;
+  height: 2rem;
+  margin: 10px 0;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.4rem;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.btn-div {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+.login-btn {
+  width: 6rem;
+  height: 2rem;
+  margin: 10px auto;
+  color: black;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fa-arrow-right {
+  color: black;
+  margin-right: 0.7rem;
+}
+
+.login-fp {
+  color: blue;
+}
+
+.login-ca {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 2rem;
+}
+
+.img-container {
+  width: 50%;
+  display: flex;
+}
+
+.login-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10rem;
+}
+
+.login-svg {
+  width: 40rem;
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+}
+
+
+@media only screen and (max-height: 1000px) and (min-height: 600px) {
+  .login-logo {
+    width: 2rem;
+    right: 0;
+  }
+  .form-container{
+    padding-top: 2rem;
+  }
+}
+@media only screen and (max-width: 1300px) and (min-width: 600px) {
+  .form-container {
+    width: 100%;
+  }
+  .img-container {
+    width: 0;
+  }
+  .login-logo {
+    width: 5rem;
+    display: inline-block;
+    right: 40%;
+  }
+  .login-svg {
+    display: none;
+  }
+  .login-outer {
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-height: 600px) and (min-height: 400px) {
+  .login-logo {
+    width: 5rem;
+    right: 0;
+  }
+  .login-svg{
+    width: 30rem;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+  .login {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .form-container {
+    width: 100%;
+  }
+  .login-outer {
+    height: 500px;
+  }
+  .login-inner {
+    height: 450px;
+  }
+  .login-logo {
+    width: 5rem;
+    display: inline-block;
+    margin: 2rem 0;
+    right: 40%;
+  }
+  .login-svg {
+    display: none;
+  }
+  .login-outer {
+    width: 25rem;
+  }
+}
+
+/* ===================== SIGNUP ===================== */
+
+.signup {
+  width: 100wh;
+  height: 100vh;
+  overflow: scroll;
+  position: relative;
+}
+
+.signup-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10rem;
+}
+.signup-svg {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 30rem;
+}
+
+.signup-form-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-header {
+  margin: 1rem auto;
+}
+
+.signup-header > h1 {
+  font-size: 3rem;
+}
+
+.signup-to-login-link {
+  color: yellow;
+}
+
+.signup-form-div {
+  display: flex;
+  margin: 1rem;
+}
+
+.signup-form-label {
+  margin: 1.5rem 1.3rem;
+  font-size: 2rem;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.signup-form-inputs {
+  margin: 0.7rem 1.3rem;
+  width: 50%;
+}
+
+.signup-input {
+  width: 100%;
+  height: 2rem;
+  margin: 0.7rem;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.4rem;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.signup-btn-div {
+  margin: 1rem auto;
+}
+
+.signup-btn {
+  width: 8rem;
+  height: 3rem;
+  border-radius: 2rem;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signup-img-container {
+  width: 30%;
+}
+
+.otp-btn {
+  border-radius: 1rem;
+  width: 7rem;
+  height: 2rem;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-height: 800px) and (min-height: 500px) {
+  .signup-logo {
+    width: 5rem;
+  }
+  .signup-svg{
+    width: 20rem;
+  }
+
+  .signup-form-label{
+    font-size: 1.5rem;
+  }
+  .signup-input{
+    height: 1.5rem;
+    margin: 0.6rem;
+  }
+
+  .signup-header {
+    margin: 0.6rem auto;
+  }
+
+  .signup-btn-div{
+    margin: 0.5rem auto;
+  }
+  .signup-form-div{
+    margin: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 600px) {
+  .signup-form-container {
+    width: 100%;
+  }
+  .signup-img-container {
+    width: 0;
+  }
+  .signup-svg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 280px) {
+  .signup-form-container {
+    width: 100%;
+  }
+  .signup-header {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+  }
+  .signup-form-div {
+    position: absolute;
+    top: 10rem;
+    margin: 1rem 0;
+  }
+  .signup-form-labels {
+    display: flex;
+    flex-direction: column;
+  }
+  .signup-form-inputs {
+    margin-left: 0;
+    padding-right: 0.2rem;
+  }
+  .signup-input{
+    width: 97%;
+    margin: 0;
+    margin-bottom: 1.8rem;
+  }
+  .signup-btn-div {
+    position: absolute;
+    top: 45rem;
+    margin: 1rem auto;
+    width: 100%;
+  }
+  .signup-img-container {
+    width: 0;
+  }
+  .signup-svg {
+    display: none;
+  }
+  .signup-form-label {
+    margin: 1.5rem 1.3rem;
+    font-size: 1rem;
+  }
+}
+
+/* ===================== USER HOME ===================== */
+.userhome {
+  width: 100wh;
+  height: 86vh;
+  position: relative;
+  padding-top: 14vh;
+}
+
+.userhome-header {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position:fixed;
+  background-color: black;
+
+}
+
+.userhome-heading {
+  padding-left: 2rem;
+}
+.userhome-input-div {
+  position: relative;
+  width: auto;
+}
+
+.search-icon {
+  position: absolute;
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+  color: black;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+}
+
+.userhome-input {
+  margin: auto 1rem;
+  width: 15rem;
+  height: 2rem;
+  border-radius: 2rem;
+  padding: 0.2rem 3rem;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.salon-cards {
+  padding:4rem 2rem 1rem 2rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.salon-card {
+  padding: 0.7rem 1rem;
+  width: 300px;
+  height: 350px;
+  background-color: white;
+  border-radius: 0.3rem;
+}
+
+.salon-card:hover {
+  -webkit-box-shadow: -1px -1px 17px 3px rgba(188, 229, 247, 1);
+  -moz-box-shadow: -1px -1px 17px 3px rgba(188, 229, 247, 1);
+  box-shadow: -1px -1px 17px 3px rgba(188, 229, 247, 1);
+}
+
+.salon-card-img {
+  border-radius: 1rem;
+  height: 170px;
+  background-color: black;
+}
+
+.salon-card-img > img {
+  border-radius: 1rem;
+  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.salon-card-details {
+  padding-top: 1rem;
+  height: auto;
+}
+.salon-card-details > h1 {
+  font-family: Rajdhani;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+}
+
+.salon-card-details > p {
+  color: black;
+}
+
+.call-link {
+  display: flex;
+  align-items: center;
+  color: black;
+  margin-top: 1rem;
+}
+
+.call-link > .fa-phone-volume {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.call-link > p {
+  color: black;
+  margin: auto 1rem;
+}
+
+/* @media only screen and (max-width: 1120px) and (min-width: 600px) {
+  .salon-cards {
+    justify-content: space-around;
+  }
+} */
+
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+  .userhome{
+    height: 92vh;
+    padding-top: 8vh;
+  }
+  .userhome-heading {
+    display: none;
+  }
+
+  .userhome-header {
+    width: 100wh;
+  }
+
+  .userhome-input-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .userhome-input {
+    width: 80%;
+  }
+
+  .salon-cards {
+    justify-content: center;
+  }
+}
+
+/* =================== SALON INFO =========================== */
+
+.saloninfo {
+  width: 100wh;
+  height: auto;
+  padding-top: 14vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: relative;
+}
+
+.saloninfo-header > h1 {
+  font-size: 3rem;
+  font-family: Rammetto One;
+  font-weight: 400;
+}
+
+.saloninfo-header > p {
+  font-size: 1.5rem;
+}
+
+.services-provided {
+  position: absolute;
+  top: 30vh;
+  right: 4rem;
+}
+
+.services-provided > h1 {
+  font-family: Rammetto One;
+  font-weight: 400;
+}
+.service {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.services-svg {
+  width: 3rem;
+}
+
+.saloninfo-photos {
+  height: 100%;
+  width: 60%;
+}
+
+.salon-photos > h1 {
+  font-family: Rammetto One;
+  font-weight: 400;
+}
+
+.salon-images {
+  margin: 1rem auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.salon-image {
+  width: 13rem;
+  height: 10rem;
+}
+
+.salon-image > img {
+  border-radius: 1rem;
+  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.book-now > h1 {
+  font-family: Rammetto One;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.book-now {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.saloninfo-btn > img {
+  border-radius: 1rem;
+  min-width: 20%;
+  max-height: 100%;
+  max-width: 20%;
+  min-height: 100%;
+  margin-right: 1rem;
+}
+
+.saloninfo-btn {
+  height: 4rem;
+  width: 15rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.stylist-photo > h1 {
+  font-family: Rammetto One;
+  font-weight: 400;
+}
+
+.stylist-images {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+}
+
+.stylist-image {
+  height: 15rem;
+  width: 13rem;
+}
+
+.stylist-image > img {
+  border-radius: 1rem;
+  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100%;
+}
+.dialog-text {
+  text-align: center;
+}
+.dialog-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-input {
+  width: 80%;
+  height: 2rem;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.saloninfo-dialog-btn {
+  width: 50%;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+  .services-provided {
+    position: relative;
+    top: auto;
+    right: auto;
+    padding-top: 1rem;
+  }
+
+  .services-provided > h1 {
+    text-align: center;
+  }
+  .saloninfo-photos {
+    height: auto;
+    width: 100%;
+  }
+  .salon-photos > h1 {
+    text-align: center;
+  }
+  .stylist-photo > h1 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 280px) {
+  .saloninfo {
+    padding-top: 8vh;
+  }
+  .book-now {
+    flex-direction: column;
+  }
+
+  .book-now {
+    width: 100%;
+  }
+  .saloninfo-btn {
+    height: 3.5rem;
+    width: 15rem;
+    border-radius: 2rem;
+    margin: 1rem;
+    font-weight: bold;
+  }
+  .book-now > h1 {
+    font-size: 2rem;
+  }
+  .saloninfo-header > p {
+    font-size: 1rem;
+  }
+  .services-provided {
+    position: relative;
+    top: auto;
+    right: auto;
+    padding-top: 1rem;
+  }
+  .services-provided > h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .saloninfo-photos {
+    height: auto;
+    width: 100%;
+  }
+
+  .salon-images {
+    justify-content: center;
+  }
+
+  .salon-photos > h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .salon-image {
+    width: 80%;
+  }
+  .stylist-images {
+    justify-content: center;
+  }
+  .stylist-photo > h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+
+/* ==================== STYLISHINFO ================== */
+
+.userprofile {
+  padding-top: 12vh;
+  width: 100%;
+  display: flex;
+}
+.userprofile-left {
+  width: 60%;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 5px solid white;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-img img,
+.profile-img-blur-input {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+}
+
+.profile-img:hover .profile-img-blur {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(253, 253, 253, 0.3);
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 99;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img:hover .profile-img-blur-input {
+  width: 20rem;
+  height: 20rem;
+  overflow: hidden;
+  background: transparent;
+  left: 0;
+  position: absolute;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.profile-img-blur p {
+  color: black;
+  font-size: 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.fa-pen {
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.userprofile-user-details {
+  padding-top: 1.5rem;
+  width: 100%;
+  display: flex;
+}
+
+.userprofile-inputs-left {
+  padding-left: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.userprofile-inputs h3 {
+  margin-right: 2rem;
+}
+
+.userprofile-inputs-left {
+  width: 25%;
+}
+
+.userprofile-inputs-right {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.userprofile-text-input {
+  width: 50%;
+  border: 1px solid white;
+  border-radius: 2px;
+  background: transparent;
+  height: 1.6rem;
+  font-size: 1rem;
+  padding-left: 0.3rem;
+}
+
+.userdetails-save-btn {
+  height: 4rem;
+  width: 10rem;
+  padding: 1rem 1rem;
+  border-radius: 2rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+.userdetails-save-btn > img {
+  border-radius: 1rem;
+  min-width: 20%;
+  max-height: 100%;
+  max-width: 20%;
+  min-height: 100%;
+  margin-right: 1rem;
+}
+.userprofile-right {
+  width: 40%;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: 2px solid white;
+}
+.userprofile-right > h1 {
+  font-family: Rammetto One;
+  font-weight: 400;
+  color: white;
+}
+
+.userhistory-cards {
+  margin: 1rem 0 0 0;
+  height: 100%;
+  width: 90%;
+  overflow-y: scroll;
+}
+
+.uhcard {
+  width: 90%;
+  height: auto;
+  /* background-color: rgb(245, 168, 168); */
+  border: 2px solid white;
+  margin-bottom: 1rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+}
+
+.uhcard-header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+.uhcard h3,
+h5 {
+  font-weight: bold;
+}
+
+.uhcard-header i {
+  margin-right: 0.5rem;
+}
+
+.uhcard-dates {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.suggestion {
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.uhbtn-div {
+  gap: 2rem;
+}
+
+.uhcard-btn {
+  height: 2.5rem;
+  width: 5.5rem;
+  font-size: 1rem;
+  color: #020202;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.uhcard-btn i {
+  color: #020202;
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 750px) {
+  .userprofile-left {
+    width: 40%;
+  }
+
+  .userprofile-right {
+    width: 60%;
+  }
+
+  .userprofile-text-input {
+    width: 100%;
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 750px) and (min-width: 280px) {
+  .userprofile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .userprofile-left {
+    width: 90%;
+    padding: 1rem;
+  }
+  .userprofile-inputs-left {
+    padding: 0;
+  }
+  .userprofile-inputs-right {
+    width: 100%;
+  }
+
+  .userprofile-text-input {
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .userprofile-right {
+    width: 100%;
+    border: none;
+  }
+}
+
+/* ==========================================================================
+========================= SALON SIDE DESIGN =================================
+========================================================================== */
+
+/* ===========================  SALON SIGNUP =================================== */
+
+.salon-signup {
+  padding-top:2rem ;
+  width: 100wh;
+  height: auto;
+  text-align: center;
+}
+.ss {
+  display: flex;
+  width: 100%;
+  height:auto;
+}
+
+.ss-left {
+  height: 100%;
+  width: 60%;
+  padding-left: 2rem;
+}
+
+.ss-salon-details {
+  height: 100%;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+.ss-form-div {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.ss-form-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  gap: 1.3rem;
+}
+.ss-form-label {
+  font-size: 1.5rem;
+}
+
+.ss-form-inputs {
+  width: 40%;
+  padding-right: 1rem;
+}
+.ss-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ss-input {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  height: 2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  width: 100%;
+}
+
+.ss-btn-div {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.ss-btn {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.ss-btn i {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.ss-btn p {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.ss-right {
+  width: 40%;
+  padding: 2rem 2rem;
+  position: relative;
+}
+
+.ss-img {
+  width: 30rem;
+  position: absolute;
+  bottom: 5rem;
+  right: 2rem;
+}
+
+.ss-logo {
+  width: 10rem;
+  position: absolute;
+  right: 2rem;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 800px) {
+  .ss-img {
+    width: 20rem;
+    position: absolute;
+    bottom: 5rem;
+    right: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) and (min-width: 280px) {
+  .ss-left {
+    width: 90%;
+    padding-left: 0;
+  }
+  .ss-right {
+    display: none;
+  }
+
+  .ss-salon-details {
+    padding: 0 1rem;
+  }
+
+  .ss-form-labels {
+    width: 40%;
+    gap: 2.1rem;
+  }
+  .ss-form-inputs {
+    width: 50%;
+  }
+  .ss-form-label {
+    font-size: 1rem;
+  }
+}
+
+/* ===========================  SALON HOME =================================== */
+
+.salonhome {
+  height: 86vh;
+  width: 100wh;
+  padding-top: 14vh;
+  display: flex;
+}
+
+.salonhome-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+.salonwaiting-cards {
+  width: 95%;
+  overflow-y: scroll;
+}
+
+.salonwaitingcard {
+  border-radius: 5px;
+  margin: 1rem auto;
+  width: 90%;
+  height: auto;
+  background-color: black;
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  display: flex;
+}
+
+.salonwaitingcard i {
+  margin-right: 0.5rem;
+}
+
+.swcard-left {
+  width: 80%;
+}
+
+.swcard-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.swcard-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.swcard-req {
+  margin-top: 1rem;
+}
+.reject-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.reject-msg select,
+option,
+.swcard-input {
+  background: black;
+}
+
+.swcard-right {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.swcard-btn {
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.swcard-btn i {
+  color: black;
+}
+.primary-btn {
+  background-color: white;
+}
+
+.secondary-btn {
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background-color: wheat;
+  color: black;
+}
+
+.secondary-btn i {
+  color: white;
+}
+.secondary-btn:hover i {
+  color: black;
+}
+.salonhome-right {
+  width: 50%;
+  border-left: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.salonhome-right h1 {
+  font-size: 2rem;
+}
+
+.salonhistory-cards {
+  width: 95%;
+  overflow-y: scroll;
+}
+.historycard-call {
+  color: white;
+}
+.salonhistory-card {
+  border-radius: 5px;
+  margin: 1rem auto;
+  width: 90%;
+  height: auto;
+  background-color: black;
+  padding: 0.5rem 1rem;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+  .salonhome {
+    flex-direction: column;
+  }
+  .salonhome-left {
+    width: 90%;
+  }
+
+  .salonhome-right {
+    width: auto;
+    border: none;
+  }
+  .salonhistory-cards {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 750px) and (min-width: 280px) {
+  .salonhome {
+    flex-direction: column;
+    padding-top: 8vh;
+  }
+  .salonhome-left {
+    width: 98%;
+    padding: 1rem 0.2rem;
+  }
+  .salonwaitingcard {
+    flex-direction: column;
+  }
+
+  .salonhome-right {
+    width: auto;
+    border: none;
+    padding: 1rem 0.2rem;
+  }
+  .salonhistory-cards {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .swcard-left {
+    width: 100%;
+  }
+
+  .swcard-right {
+    margin: 1rem auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .swcard-header,
+  .swcard-content {
+    margin: 1rem auto;
+    justify-content: space-between;
+  }
+  .swcard-right button {
+    width: 7rem;
+  }
+}
+
+/* ===========================  SALON PROFILE =================================== */
+
+.salonprofile {
+  width: 100wh;
+  height: 90vh;
+  margin-top: 12vh;
+  overflow: scroll;
+}
+
+.sp-left {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sp-user-details {
+  width: 100%;
+  height: auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sp-inputs-left {
+  width: 30%;
+  gap: 1.4rem;
+}
+
+.sp-inputs-right {
+  width: 60%;
+  height: auto;
+  gap: 1.35rem;
+}
+
+.sp-text-input {
+  border: 1px solid white;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  background: transparent;
+  color: white;
+}
+
+.sp-text-input::-webkit-calendar-picker-indicator {
+  background-color: yellow;
+}
+
+.sp-right {
+  width: 50%;
+  height: 80%;
+  padding: 1rem;
+}
+
+.ss-right-toogle {
+  justify-content: space-between;
+}
+
+.gallery > h1 {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.sp-btn {
+  height: 3rem;
+  width: 12rem;
+  border-radius: 1.5rem;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.salonphotos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 2rem;
+  margin: 1rem auto;
+}
+
+.salonphoto {
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.salonphoto > img,
+.stylistphoto > img {
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 100%;
+  border-radius: 1rem;
+}
+
+.salonphoto-add {
+  width: 10rem;
+  height: 10rem;
+  border: 1px dashed white;
+  border-radius: 1rem;
+  cursor: pointer;
+  
+}
+
+.salon-img-input{
+  display: none;
+}
+.salonphoto-add:hover,
+.stylistphoto-add:hover {
+  background-color: rgba(253, 253, 253, 0.2);
+}
+
+.salonphoto-add > i,
+.stylistphoto-add > i {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.stylistphoto {
+  width: 10rem;
+  height: 12rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.stylistphoto-add {
+  width: 10rem;
+  height: 12rem;
+  border: 1px dashed white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.sp-btn > img {
+  border-radius: 1rem;
+  min-width: 20%;
+  max-height: 100%;
+  max-width: 20%;
+  min-height: 100%;
+  margin-right: 1rem;
+}
+
+.sp-btn h3 {
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 850px) and (min-width: 280px) {
+  .sp-contents {
+    flex-direction: column;
+  }
+
+  .sp-left {
+    width: 100%;
+    height: auto;
+  }
+
+  .sp-user-details {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 0;
+  }
+
+  .sp-right {
+    width: 95%;
+    padding: 0;
+    margin: 1rem auto;
+  }
+  .salonprofile{
+    margin-top: 8vh;
+  }
+}
