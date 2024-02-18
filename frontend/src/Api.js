@@ -1,1 +1,1 @@
-export const API_URL = 'http://localhost:2572/';
+export const API_URL = 'https://salon-backend-z5ak.onrender.com/';
